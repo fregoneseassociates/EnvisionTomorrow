@@ -1,0 +1,414 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="4.0">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.30729</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{A6E8B9C5-13CA-4879-8A89-C80B68F2B77F}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <RootNamespace>Envision_Tools</RootNamespace>
+    <AssemblyName>Envision_Tools</AssemblyName>
+    <MyType>Windows</MyType>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <OldToolsVersion>3.5</OldToolsVersion>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OptionInfer>Off</OptionInfer>
+    <TargetFrameworkVersion>v2.0</TargetFrameworkVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <DefineDebug>true</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <OutputPath>.\</OutputPath>
+    <DocumentationFile>Envision_Tools.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42025,42032,42036,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <DefineDebug>false</DefineDebug>
+    <DefineTrace>true</DefineTrace>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DocumentationFile>Envision_Tools.xml</DocumentationFile>
+    <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42025,42032,42036,42353,42354,42355</NoWarn>
+    <RegisterForComInterop>true</RegisterForComInterop>
+    <WarningsAsErrors>
+    </WarningsAsErrors>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="ESRI.ArcGIS.ADF, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=x86" />
+    <Reference Include="ESRI.ArcGIS.AnalysisTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.ArcCatalog, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcCatalogUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMap, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ArcMapUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Carto, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CartoUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Catalog, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.CatalogUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.ConversionTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.DataManagementTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.DataSourcesFile, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesGDB, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRaster, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DataSourcesRasterUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Display, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.DisplayUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.EditingTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.Editor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Framework, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geodatabase, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoDatabaseUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geometry, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessing, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.GeoprocessingUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.Geoprocessor, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.NetworkAnalysis, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.NetworkAnalystTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.NetworkAnalystUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalyst, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SpatialAnalystTools, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL" />
+    <Reference Include="ESRI.ArcGIS.SpatialAnalystUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.System, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="ESRI.ArcGIS.SystemUI, Version=10.1.0.0, Culture=neutral, PublicKeyToken=8fc3cc631e44ad86, processorArchitecture=MSIL">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="Microsoft.Office.Interop.Excel, Version=12.0.0.0, Culture=neutral, PublicKeyToken=71e9bce111e9429c">
+      <EmbedInteropTypes>True</EmbedInteropTypes>
+    </Reference>
+    <Reference Include="stdole, Version=7.0.3300.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+    <Reference Include="System" />
+    <Reference Include="System.Configuration.Install" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.ServiceProcess" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Import Include="Microsoft.VisualBasic" />
+    <Import Include="System" />
+    <Import Include="System.Collections" />
+    <Import Include="System.Collections.Generic" />
+    <Import Include="System.Data" />
+    <Import Include="System.Diagnostics" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="frm7DModelCalc.Designer.vb">
+      <DependentUpon>frm7DModelCalc.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frm7DModelCalc.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLandUseMix.Designer.vb">
+      <DependentUpon>frmLandUseMix.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLandUseMix.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmJobSummary.Designer.vb">
+      <DependentUpon>frmJobSummary.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmJobSummary.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmProximity.Designer.vb">
+      <DependentUpon>frmProximity.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmProximity.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSumTransportationPnts.Designer.vb">
+      <DependentUpon>frmSumTransportationPnts.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmSumTransportationPnts.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmTravelSummaryBuffers.Designer.vb">
+      <DependentUpon>frmTravelSummaryBuffers.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmTravelSummaryBuffers.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ctlEnvisionAttributesEditor.designer.vb">
+      <DependentUpon>ctlEnvisionAttributesEditor.vb</DependentUpon>
+    </Compile>
+    <Compile Include="ctlEnvisionAttributesEditor.vb">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="EnvisionTypeDockWinVBNet.vb" />
+    <Compile Include="EnvisionToolbar.vb" />
+    <Compile Include="frmAggregation.designer.vb">
+      <DependentUpon>frmAggregation.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmAggregation.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmBufferSum.Designer.vb">
+      <DependentUpon>frmBufferSum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmBufferSum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnvisionProjectSetup.Designer.vb">
+      <DependentUpon>frmEnvisionProjectSetup.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnvisionProjectSetup.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmEnvisionSlope.Designer.vb">
+      <DependentUpon>frmEnvisionSlope.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmEnvisionSlope.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFeatureSum.Designer.vb">
+      <DependentUpon>frmFeatureSum.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFeatureSum.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmFieldVariables.Designer.vb">
+      <DependentUpon>frmFieldVariables.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmFieldVariables.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmLocalJobsHousingBalance.Designer.vb">
+      <DependentUpon>frmLocalJobsHousingBalance.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmLocalJobsHousingBalance.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmOnetoManyExport.designer.vb">
+      <DependentUpon>frmOnetoManyExport.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmOnetoManyExport.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmRedevTiming.Designer.vb">
+      <DependentUpon>frmRedevTiming.vb</DependentUpon>
+    </Compile>
+    <Compile Include="frmRedevTiming.vb">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="modEnvisionSetup.vb" />
+    <Compile Include="modEnvisionToolbar.vb" />
+    <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="My Project\Application.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Application.myapp</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Resources.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="My Project\Settings.Designer.vb">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="frm7DModelCalc.resx">
+      <DependentUpon>frm7DModelCalc.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLandUseMix.resx">
+      <DependentUpon>frmLandUseMix.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmProximity.resx">
+      <DependentUpon>frmProximity.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSumTransportationPnts.resx">
+      <DependentUpon>frmSumTransportationPnts.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="My Project\Resources.resx">
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="My Project\Application.myapp">
+      <Generator>MyApplicationCodeGenerator</Generator>
+      <LastGenOutput>Application.Designer.vb</LastGenOutput>
+    </None>
+    <None Include="My Project\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <CustomToolNamespace>My</CustomToolNamespace>
+      <LastGenOutput>Settings.Designer.vb</LastGenOutput>
+    </None>
+    <EmbeddedResource Include="frmJobSummary.resx">
+      <DependentUpon>frmJobSummary.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmTravelSummaryBuffers.resx">
+      <DependentUpon>frmTravelSummaryBuffers.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ctlEnvisionAttributesEditor.resx">
+      <DependentUpon>ctlEnvisionAttributesEditor.vb</DependentUpon>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmAggregation.resx">
+      <DependentUpon>frmAggregation.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmBufferSum.resx">
+      <DependentUpon>frmBufferSum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnvisionProjectSetup.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEnvisionProjectSetup.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmEnvisionSlope.resx">
+      <SubType>Designer</SubType>
+      <DependentUpon>frmEnvisionSlope.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFeatureSum.resx">
+      <DependentUpon>frmFeatureSum.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmFieldVariables.resx">
+      <DependentUpon>frmFieldVariables.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmLocalJobsHousingBalance.resx">
+      <DependentUpon>frmLocalJobsHousingBalance.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmOnetoManyExport.resx">
+      <DependentUpon>frmOnetoManyExport.vb</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmRedevTiming.resx">
+      <DependentUpon>frmRedevTiming.vb</DependentUpon>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua-Smooth-Folder-DropBox-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Color-Settings-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\sites.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua-Stripped-Folder-Sites-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua-Smooth-Folder-Developer-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua-Smooth-Folder-Public-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua-Smooth-Folder-System-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua-Stripped-Folder-Generic-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua-Stripped-Folder-Applications-48x48.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{94E38DFF-614B-4CBD-B67C-F211BB35CE8B}" />
+    <Service Include="{967B4E0D-AD0C-4609-AB67-0FA40C0206D8}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\34_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="app.config" />
+    <None Include="Resources\33_16x16.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\right.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\left.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\3D-Icons_48x48.png" />
+    <None Include="Resources\Spreadsheets2.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Aqua Smooth Folder Documents.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Resources\2012-envision-logo-01.png" />
+    <None Include="Resources\ET_LOGO.bmp" />
+  </ItemGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.VisualBasic.targets" />
+  <Target Name="BeforeClean">
+    <Exec WorkingDirectory="$(CommonProgramFiles)\ArcGIS\bin" Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Engine /u /s" Condition="Exists('$(TargetPath)')" ContinueOnError="true" />
+    <Exec WorkingDirectory="$(CommonProgramFiles)\ArcGIS\bin" Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Desktop /u /s" Condition="Exists('$(TargetPath)')" ContinueOnError="true" />
+  </Target>
+  <Target Name="AfterBuild">
+    <Exec ContinueOnError="true" WorkingDirectory="$(CommonProgramFiles)\ArcGIS\bin" Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Engine /s" />
+    <Exec ContinueOnError="true" WorkingDirectory="$(CommonProgramFiles)\ArcGIS\bin" Command="esriRegasm.exe &quot;$(TargetPath)&quot; /p:Desktop /s" />
+  </Target>
+</Project>
