@@ -1,0 +1,72 @@
+﻿<?xml version="1.0"?>
+<doc>
+<assembly>
+<name>
+Envision_Tools
+</name>
+</assembly>
+<members>
+<member name="M:Envision_Tools.frmLocationEfficiency.getValidAlias(System.String,System.String,System.String)">
+	<summary>
+ Gets a valid alias name for the input
+ </summary>
+	<param name="currentAlias"></param>
+	<param name="layerName"></param>
+	<param name="fieldName"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Envision_Tools.frmLocationEfficiency.CalculateZonalStatsAsTableSingleFeature(System.String,ESRI.ArcGIS.Carto.ILayer,ESRI.ArcGIS.Geodatabase.IFeature,ESRI.ArcGIS.Carto.IFeatureLayer,System.String,System.String,System.String)">
+	<summary>
+ Calculate zonal statistics as table for a single feature
+ </summary>
+	<param name="valueLayer"></param>
+	<param name="zoneLayer"></param>
+	<param name="feature"></param>
+	<param name="zoneFeatureLayer"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Envision_Tools.frmLocationEfficiency.CalculateZonalStatsAsTable(System.String,ESRI.ArcGIS.Carto.ILayer,System.String,System.String,System.String)">
+	<summary>
+ Calculate zonal statistics as table
+ </summary>
+	<param name="valueLayer"></param>
+	<param name="zoneLayer"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="P:Envision_Tools.My.Resources.Resources.ResourceManager">
+	<summary>
+  Returns the cached ResourceManager instance used by this class.
+</summary>
+</member><member name="P:Envision_Tools.My.Resources.Resources.Culture">
+	<summary>
+  Overrides the current thread's CurrentUICulture property for all
+  resource lookups using this strongly typed resource class.
+</summary>
+</member><member name="T:Envision_Tools.My.Resources.Resources">
+	<summary>
+  A strongly-typed resource class, for looking up localized strings, etc.
+</summary>
+</member><member name="M:Envision_Tools.modEnvisionToolbar.CalculateField(ESRI.ArcGIS.Geodatabase.IFeatureClass,System.String,System.String,System.String)">
+	<summary>
+ Calculates a field using the ArcToolbox Data Management - Calculate Field tool
+ </summary>
+	<param name="featureclass"></param>
+	<returns></returns>
+	<remarks></remarks>
+</member><member name="M:Envision_Tools.modEnvisionToolbar.OnTop(System.Int32,System.Int32)">
+ -----------------------------------------------------------------------------
+ <summary>
+ Makes the form float on top of it's parent.
+ </summary>
+	<param name="FormHwnd"></param>
+	<param name="appHwnd"></param>
+	<remarks>
+ Uses SetWindowLong() API call to make the form minimize with ArcMap.
+ </remarks>
+	<history>
+	</history>
+ -----------------------------------------------------------------------------
+
+</member>
+</members>
+</doc>
